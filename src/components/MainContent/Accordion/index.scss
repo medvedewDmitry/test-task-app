@@ -1,0 +1,65 @@
+.section__accordion {
+  margin-top: var(--mt-64);
+}
+
+details {
+  padding: 12px 0px;
+
+  p {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &[open] {
+    p {
+      border-bottom: 2px solid var(--color-accent);
+    }
+
+    summary {
+      border-bottom: 1px solid var(--color-accent);
+
+      color: var(--color-accent);
+
+      &::after {
+        content: "";
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+
+        background: url("../../../assets/accordion__marker-open.png") no-repeat;
+      }
+    }
+  }
+
+  summary {
+    color: var(--color-gray);
+
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--color-third-gray);
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+
+      background: url("../../../assets/accordion__marker.png") no-repeat;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.menu__button {
+  width: 32px;
+  height: 30px;
+  position: relative;
+
+  // display: flex;
+  align-items: center;
+
+  background-color: transparent;
+
+  z-index: 1000;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    background-color: black;
+    height: 2px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 24px;
+    background-color: black;
+    height: 2px;
+  }
+
+  .btn__close {
+    display: none;
+  }
+}

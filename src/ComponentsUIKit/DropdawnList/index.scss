@@ -1,0 +1,80 @@
+.select-ui {
+  border-bottom: 2px solid var(--color-second-gray);
+
+  &:hover {
+    transition: border-color 0.3s linear;
+    cursor: pointer;
+    border-bottom: 2px solid var(--color-accent);
+  }
+
+  // &.hover-select {
+  //   transition: border-color 0.3s linear;
+  //   cursor: pointer;
+  //   border-bottom: 2px solid var(--color-accent);
+  // }
+  // &.active-select {
+  //   transition: border-color 0.3s linear;
+  //   cursor: pointer;
+  //   border-bottom: 2px solid var(--color-accent);
+
+  // }
+
+  .listbox {
+    padding: 0px;
+  }
+
+  div {
+    padding: 6px 0px;
+
+    color: var(--color-primary);
+    font-size: 16px;
+
+    button {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: transparent;
+
+      width: 100%;
+      height: 100%;
+
+      text-align: left;
+
+      &.active-btn::after {
+        background: url("../../assets/accordion__marker-open.png") no-repeat;
+      }
+      &.active-btn::after {
+        background: url("../../assets/accordion__marker-open.png") no-repeat;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 10px;
+        height: 8px;
+        display: inline-block;
+        background: url("../../assets/accordion__marker.png") no-repeat;
+      }
+    }
+  }
+
+  option {
+    padding: 8px 24px;
+
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      background: var(--color-accent);
+    }
+
+    &:focus {
+      border: 0px;
+      color: #fff;
+      background: var(--color-accent);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.header-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  z-index: 1000;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background-color: #ff3a62;
+    transition: transform 0.15s linear;
+    z-index: -1;
+    content: "";
+  }
+}

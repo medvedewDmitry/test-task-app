@@ -1,0 +1,251 @@
+@import url("./css/reset.css");
+
+:root {
+  --color-primary: #1b1b1b;
+  --color-second: #7d7d7d;
+  --color-accent: #3e29e3;
+  --color-gray: #7d7d7d;
+  --color-second-gray: #aeadae;
+  --color-third-gray: #cbcbcc;
+  --color-red: #e80f3b;
+
+  --mt-80: 80px;
+  --mt-64: 64px;
+  --mt-48: 48px;
+  --mt-32: 32px;
+  --mt-24: 24px;
+  --mt-16: 16px;
+  --mt-8: 8px;
+}
+
+// Menu information
+
+.menu__body.active-menu ~ .container .menu__button {
+  &::after {
+    display: none;
+  }
+  &::before {
+    display: none;
+  }
+  .btn__close {
+    z-index: 1001;
+    display: block !important;
+
+    path {
+      fill: #fff !important;
+    }
+  }
+}
+
+.menu__body {
+  display: none;
+
+  position: absolute;
+
+  .menu__body__info {
+    display: none;
+  }
+
+  &.active-menu {
+    display: block;
+    z-index: 1000;
+
+    height: 100vh !important;
+    width: 100vw !important;
+    background-image: url(./assets/bg.jpg);
+    background-repeat: no-repeat;
+
+    .menu__body__info {
+      display: flex;
+      flex-direction: column;
+
+      &::before {
+        content: "";
+        background-color: #fff;
+        width: 59%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100vh;
+        margin: 8px;
+      }
+
+      h2 {
+        z-index: 1000;
+
+        margin-top: 112px;
+      }
+      p.info__description {
+        margin-top: 24px;
+        z-index: 1000;
+      }
+
+      h4.info__phone {
+        margin-top: 32px;
+
+        z-index: 1000;
+      }
+
+      .info__social__block {
+        position: absolute;
+        bottom: 40px;
+      }
+
+      .info__social__link {
+        display: flex;
+
+        align-items: center;
+
+        gap: 24px;
+
+        color: var(--color-accent);
+
+        .social__btn {
+          border-radius: 50%;
+          width: 48px;
+          height: 48px;
+
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+
+          background-color: #fff;
+          background-image: url("./assets/social__link.png");
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+      }
+    }
+  }
+}
+
+body.disactive-scroll {
+  overflow: hidden;
+  width: 100vw;
+}
+
+//  Header
+.header {
+  padding-top: 32px;
+  padding-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+.header__heading-logo {
+  display: flex;
+  gap: 32px;
+
+  align-items: center;
+
+  line-height: 20px;
+
+  p {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+  }
+}
+
+// Font styles
+h1 {
+  color: var(--color-primary);
+  font-size: 48px;
+  line-height: 56px;
+}
+h2 {
+  font-size: 32px;
+  line-height: 40px;
+}
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+h4 {
+  font-size: 18px;
+  line-height: 28px;
+}
+.p_lead {
+  font-size: 24px;
+  line-height: 32px;
+}
+.p_18 {
+  font-size: 18px;
+  line-height: 28px;
+}
+.p_16 {
+  font-size: 16px;
+  line-height: 24px;
+
+  &.gray {
+    color: var(--color-second);
+  }
+}
+.p_14 {
+  font-size: 14px;
+  line-height: 20px;
+
+  span {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  &.gray {
+    color: var(--color-second);
+  }
+}
+
+// Common style for components and elements
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.text__description {
+  padding: 0px;
+  margin: 0px;
+
+  margin-top: var(--mt-24);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: var(--mt-48);
+}
+.indications__grid {
+  display: grid;
+  gap: 32px;
+
+  grid-template-columns: repeat(4, 1fr);
+}
+.base__grid {
+  display: grid;
+  gap: 48px;
+
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.base__grid_2bl {
+  display: grid;
+  gap: 32px;
+
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--color-primary);
+
+  margin-top: 160px;
+  p {
+    text-align: center;
+  }
+}
+
+@import url("./css/media.css");

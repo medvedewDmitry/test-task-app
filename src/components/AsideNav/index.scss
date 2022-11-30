@@ -1,0 +1,39 @@
+.aside__nav {
+  margin-top: 288px;
+  height: 100%;
+  float: left;
+
+  &.moved-nav {
+    margin-top: 200px;
+    transition: position 0.3s linear, bottom 0.3s linear, top 0.3s linear;
+  }
+}
+
+.nav__menu__list {
+  list-style-type: none;
+
+  padding-inline-start: 0px;
+
+  position: fixed;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.nav__menu__link {
+  font-family: "Graphik";
+
+  color: var(--color-gray);
+
+  text-decoration: none;
+
+  margin-bottom: 16px;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  &:active {
+    color: var(--color-accent);
+  }
+}
