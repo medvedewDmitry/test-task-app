@@ -2,11 +2,11 @@ import React from "react";
 import Accordion from "./Accordion/Accordion";
 import ButtonSection from "./ButtonSection/ButtonSection";
 import CheckBox from "./CheckBox/CheckBox";
-import Dropdawn from "./Dropdawn/Dropdawn";
+
 import Grid from "./Grid/Grid";
 import IntroDescription from "./IntroDescription/IntroDescription";
 import Typography from "./Typography/Typography";
-import UI from "./UI/UI";
+
 
 const MainContent = () => {
   return (
@@ -14,8 +14,6 @@ const MainContent = () => {
       <IntroDescription />
       <Grid />
       <Typography />
-      <UI />
-      <Dropdawn />
       <ButtonSection />
       <CheckBox />
       <Accordion />
