@@ -13,7 +13,6 @@ const MainContent = () => {
       <IntroDescription />
       <Grid />
       <Typography />
-
       <ButtonSection />
       <CheckBox />
       <Accordion />
