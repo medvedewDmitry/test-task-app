@@ -21,11 +21,6 @@ const AsideNav = () => {
               Типографика
             </a>
           </li>
-          <li className="nav__menu__item">
-            <a href="#UI" className="nav__menu__link">
-              UI
-            </a>
-          </li>
         </ul>
       </nav>
     </section>
